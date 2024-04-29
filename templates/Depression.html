@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/Depression.css">
+    <title>Depression.html</title>
+</head>
+<body>
+    <header class="text-gray-600 body-font ">
+        <div class="relative">
+            <div class="fixed ">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center position:sticky">
+          <a class="flex title-font font-medium items-center text-white-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">CyBot</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-black-900 flex flex-wrap items-center text-base justify-center">
+            <a href="{{url_for('home')}}" class="mr-5 hover:text-gray-900">Home Page</a>
+            <a href="{{url_for('login')}}" class="mr-5 hover:text-gray-900">Register/Sign-in</a>
+            <a href="{{url_for('chat')}}" class="mr-5 hover:text-gray-900">Chat</a>
+            <a href="{{url_for('manage_health')}}" class="mr-5 hover:text-gray-900">Manage Health</a>
+            <a href="{{url_for('journal')}}" class="mr-5 hover:text-gray-900">Journal</a>
+            <a href="{{url_for('contact')}}" class="mr-5 hover:text-gray-900">Contact Information</a>
+          </nav>
+          <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button> -->
+        </div>
+        </div>
+        </div>
+        </header>
+      </header>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='depression3.png')}}" height="720" width="600">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">What is depression?
+              <br class="hidden lg:inline-block">
+            </h1>
+            <div class="text-gray-700"><p class="mb-8 leading-relaxed">Depression is a common mental health disorder that affects millions of people worldwide. It's a serious medical condition that can negatively impact a person's quality of life, relationships, and work performance. Depression is more than just feeling sad or "blue"; it's a persistent feeling of sadness, hopelessness, and despair that lasts for weeks, months, or even years.</p>
+    
+                <p>Depression can affect people of all ages, genders, and backgrounds, and can be caused by a variety of factors, including genetics, brain chemistry, environmental factors, and life events. Symptoms of depression can include feelings of sadness or emptiness, loss of interest in activities, changes in appetite or sleep patterns, fatigue, difficulty concentrating, and thoughts of self-harm or suicide.</p>
+                
+                <p>It's important to seek help if you're experiencing symptoms of depression. Treatment options for depression include therapy, medication, lifestyle changes, and support from loved ones. With proper treatment, many people with depression are able to manage their symptoms and lead fulfilling lives.</p><br>
+                
+                <p>If you or someone you know is struggling with depression, it's important to reach out for help. Our website is dedicated to providing resources and support for those struggling with depression, and we're here to help you on your journey towards healing and recovery.</p></div><br>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="https://www.psychiatry.org/patients-families/depression/what-is-depression">Learn More</a></button>
+              <!-- <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Cognitive Behavioral Therapy (CBT)
+              <br class="hidden lg:inline-block">
+            </h1>
+            <div class="text-gray-700"><p class="mb-8 leading-relaxed">Cognitive Behavioral Therapy (CBT) is a form of psychotherapy that focuses on identifying and changing negative thought patterns and behaviors. It is a goal-oriented and practical approach to treatment that helps individuals learn new coping skills to improve their mental well-being. The therapist works collaboratively with the client to identify and challenge negative thoughts and beliefs that may be contributing to mental health issues such as anxiety, depression, and post-traumatic stress disorder (PTSD). Through CBT, clients learn to reframe their thinking and develop new behaviors that promote positive change.</p></div>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a href="https://www.mayoclinic.org/tests-procedures/cognitive-behavioral-therapy/about/pac-20384610">Learn More</a></button>
+              <!-- <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button> -->
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='cbt.png')}}">
+          </div>
+        </div>
+      </section>
+
+      
+</body>
+</html>
+

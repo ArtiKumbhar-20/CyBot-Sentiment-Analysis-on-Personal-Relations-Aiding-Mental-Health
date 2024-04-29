@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form validation</title>
+  <link rel="stylesheet" href="/static/styles/login.css">
+  <link rel="stylesheet" href="login.js" type="text\Javascript">
+  <link href = "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles/signup.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">CyBot</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+            <a href="{{url_for('home')}}" class="mr-5 hover:text-gray-900">Home Page</a>
+            <a href="{{url_for('login')}}" class="mr-5 hover:text-gray-900">Register/Sign-in</a>
+            <a href="{{url_for('chat')}}" class="mr-5 hover:text-gray-900">Chat</a>
+            <a href="{{url_for('manage_health')}}" class="mr-5 hover:text-gray-900">Manage Health</a>
+            <a href="{{url_for('journal')}}" class="mr-5 hover:text-gray-900">Journal</a>
+            <a href="{{url_for('contact')}}" class="mr-5 hover:text-gray-900">Contact Information</a>
+          </nav>
+          <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button> -->
+        </div>
+    </header>
+ 
+    <!-- <!DOCTYPE html> -->
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <!-- <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration or Sign Up form in HTML CSS | CodingLab </title> 
+    <link rel="stylesheet" href="style.css">
+   </head> -->
+<body>
+    <div class="form-container">
+    <div class="wrapper">
+    <h2>Registration</h2>
+    <form action="/Signup" method="post">
+      <div class="input-box">
+        <input type="text" name="username" placeholder="Enter your name" required>
+      </div>
+      <div class="input-box">
+        <input type="text" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="password" placeholder="Create password" required>
+      </div>
+      <div class="input-box">
+        <input type="password" name="confirm_password" placeholder="Confirm password" required>
+      </div>
+      <!-- <div class="policy">
+        <input type="checkbox">
+        <h3>I accept all terms & condition</h3>
+      </div> -->
+      <div class="input-box button">
+        <input type="Submit" value="Register Now" onclick="register()">
+      </div>
+    </form>
+  </div>
+  <!-- ###################################################################################################################################### -->
+  
+  <script>
+    function register() {
+      var name = document.getElementsByName("name")[0].value;
+      var email = document.getElementsByName("email")[0].value;
+      var password = document.getElementsByName("password")[0].value;
+      var confirm_password = document.getElementsByName("confirm_password")[0].value;
+  
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/insert", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+  
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          console.log("Data inserted successfully!");
+        }
+      };
+  
+      var data = JSON.stringify({ name: name, email: email, password:password, confirm_password:confirm_password});
+      xhr.send(data);
+    }
+  </script>
+
+<!-- ################################################################################################################### -->
+
+</body>
+</html>
+</body>
+</html>
